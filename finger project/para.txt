@@ -1,0 +1,3 @@
+opencv_createsamples.exe -info crop.txt -bg neg.txt -vec cropped.vec -num 300 -w 20 -h 20
+
+opencv_traincascade.exe -data . -vec cropped.vec -bg neg.txt -w 20 -h 20 -numPos 250 -numStages 13
